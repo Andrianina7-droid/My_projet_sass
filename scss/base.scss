@@ -1,0 +1,108 @@
+@import './color.scss';
+@import './variable.scss';
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-color:$backgrey ;
+    // @include respond-to(tablet){
+    //     font-weight: $medium;
+    //     width:80%;
+    // }
+}
+html{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+section{
+    margin-bottom: 50px;
+}
+.bloc-container{
+    display: flex;
+    box-sizing: border-box;
+    &--container-left{
+        align-self: flex-start;
+        display: flex;
+        flex-direction: column;
+        width: 275px;
+        min-width: 275px;
+        position: fixed;
+        // top:0;
+        // left: 0;
+        justify-content: center;
+        border: 1px solid $backgrey;
+        box-shadow: 2px $ten $ten  #00FFFF;
+        &--image{ 
+            border: 1px solid black;
+            border-radius: 50%;
+            margin: $ten auto 0 ;
+            display: block;
+            width:50%;
+        }
+        .menu{
+            list-style-type: none;
+            line-height: .5;
+            padding-left: 15px;
+            a{
+                text-decoration: none;
+                display: flex;
+                margin-top: 10px;
+                margin-left: 20px;
+                padding: 5px;
+                
+                
+                .container-left-image {
+                    width: 20%;
+                    img{
+                        width:75%;
+                        height:100%;
+                    }
+                   
+                }
+                .container-left-item{
+                    width:75%;
+                    font-size: 1rem;
+                    color: $white;
+                    margin:auto;
+                    box-sizing: border-box;
+                    padding-left: $ten;
+                    &:hover{
+                        color: $electricblue;
+                    }
+                }
+                
+                
+            }
+        }
+        @include respond-to(mobile){
+            
+            position: fixed;
+            left: -100%;
+            top: 0;
+            width: 250px;
+            height: 100%;
+            background-color: #2a2a2a;
+            z-index: 999;
+            transition: left 0.3s ease;
+            &:active{
+                left: 0;
+            }
+        }
+        
+       
+    }
+
+    .container-right{
+        margin-left: 275px;
+        box-sizing: border-box;
+        padding: 0px 25px;
+        flex-grow: 1;
+        @include respond-to(mobile){
+            margin: 0;
+        }
+    }
+    
+    
+}
+

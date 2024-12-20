@@ -1,0 +1,17 @@
+    
+.section_home{
+    background-image: url('../images/background_projet.png');
+    background-size: 100% 150%;
+    height: 400px;
+    position: relative;
+    
+    h4{
+        position:absolute;
+        bottom: 10px;
+        right: 150px;
+        text-align:center ;
+        font-family: 'Poppins' sans-serif;
+        @include there4functions($fs:1rem,$fw:200,$color:$electricblue)
+    }
+}
+

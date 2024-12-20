@@ -1,0 +1,66 @@
+
+
+@mixin there4functions($fs,$lh:auto,$color,$fw,$isuppercase:false ){
+    font-size: $fs;
+    font-weight: $fw;
+    line-height: $lh;
+    color: $color;
+    @if $isuppercase{
+        text-transform: uppercase;
+        
+    }
+}
+@mixin dimension($w,$h){
+    width: $w;
+    height: $h;
+}
+
+@mixin insideproperty($d,$ai,$jc){
+    display: $d;
+    align-items: $ai;
+    justify-content:$jc;
+}
+
+@mixin respond-to($device) {
+    @if $device == mobile{
+        @media screen and (max-width:$mobile){
+            @content;
+        }
+    }
+    @else if $device == tablet{
+        @media screen and (max-width:$tablet){
+            @content;
+        }
+    }
+    @else if $device == desktop{
+        @media screen and (max-width:$desktop){
+            @content;
+        }
+    }
+}
+@media screen and (max-width:$mobile){
+    .bloc-container--container-left{
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 999;
+        .nav_toggle{
+            display: block;
+            font-size: 3000px;
+        }
+    }
+    
+}
+
+
+
+   
+
+
+    
+
+
+
+
+
+     

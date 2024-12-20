@@ -1,0 +1,28 @@
+.section_project{
+   
+    border: 1px solid transparent;
+    box-shadow: 2px 5px 5px #00FFFF;
+    border-radius: 20px;
+    @include insideproperty($d:flex,$ai:auto,$jc:space-between);
+    // height: auto;
+    
+    &_item{
+        background-color: $white;
+        border-top-left-radius: inherit;
+        border-bottom-left-radius: inherit;
+        h2{
+            padding-top: $ten;
+            padding-left: 20px;
+            @include there4functions($fs:2rem,$color:$electricblue,$fw:400);
+        }
+        p{
+            padding: 12px;
+        }
+    }
+    img{
+        @include dimension($w:80%,$h:80%);
+        border-top-right-radius: inherit;
+        border-bottom-right-radius: inherit;
+    }
+}
+    

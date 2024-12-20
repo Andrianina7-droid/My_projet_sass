@@ -1,0 +1,32 @@
+.section_about{
+    position: relative;
+    
+    border: 1px solid transparent;
+    box-shadow: 2px 5px 5px #00FFFF;
+    background-image: url('../images/fond_content.png');
+    background-size: 100% 100%;
+    border-radius: 30px;
+    &_title{
+        padding: 20px 190px;
+        @include there4functions($fs:2rem,$fw:bold,$color:$electricblue);
+        @include respond-to(tablet){
+            @include there4functions($fs:1.5rem,$fw:bold,$color:$electricblue)
+        }
+    }
+    &_text{
+        padding-left: 190px;
+        padding-bottom:30px;
+        @include there4functions($fs:1rem,$lh:1.5,$color:$grey,$fw:auto);
+        
+    }
+    &_icons{
+        position: absolute;
+        bottom: 20px;
+        left:120px;
+    }
+    @include respond-to(tablet){
+        margin: 20px;
+        width: 100%;
+        height: auto;  
+    }
+}

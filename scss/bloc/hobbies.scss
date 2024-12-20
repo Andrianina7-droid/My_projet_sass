@@ -1,0 +1,73 @@
+.section_hobbies{
+
+    
+    border: 1px solid transparent;
+    box-shadow: 2px 5px 5px #00FFFF;
+    border-radius: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    &_container_left{
+        border-top-left-radius: inherit;
+        border-bottom-left-radius: inherit;
+        width: 65%;
+        background: linear-gradient(to bottom right, #00FFFF, #FF02FF);
+        .container_image{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: space-around;
+            img{
+                
+                margin-top: 40px;
+                display: block;
+                border: 5px solid #fff;
+                width: 100%;
+                height: 60%;
+               
+
+            }
+        }
+    }
+    &_container_right{
+        background-color: #fff;
+        border-top-right-radius: inherit;
+        border-bottom-right-radius: inherit;
+        width: 35%;
+        h2{
+            padding-top: 15px;
+            text-align: center;
+            @include there4functions($fs:2rem,$color:$electricblue,$fw:400);
+        }
+        
+        .list{
+            list-style-type: none;
+            color: $grey;
+            .item{
+                font-size:24px;
+                transform: translate(-100%,0px);
+                opacity: 0;
+                animation: item-slide 1s forwards
+            }
+            @keyframes item-slide{
+                0%{
+                }
+                100%{
+                    opacity: 1;
+                    transform: translate(0px,0px);
+                }
+            }
+            .item:not(:last-child){
+                margin-bottom: 20px;
+            }
+            @for $i from 1 to 5 {
+                $delay: ($i - 1)*2;
+                .item:nth-child(#{$i}){
+                    animation-delay: #{$delay}s;
+                }
+            }
+        }
+        
+    }
+
+
+}

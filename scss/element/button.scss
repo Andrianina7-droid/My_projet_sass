@@ -1,0 +1,54 @@
+
+.button{
+    margin: 30px;
+    border: 1px solid rgba(0,0,0,.5);
+    display: block;
+    outline:none;
+    font-size: 14px;
+    padding: 15px 20px;
+    color:#fff;
+    cursor:pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 12px;
+    &::after{
+        content: "";
+        z-index: -1;
+        position: absolute;
+        @include dimension($w:100%,$h:100%);
+        background-color: transparent;
+        left: 0;
+        top: 0;
+        border-radius: 20px;
+    }
+    &::before{
+        content: "";
+        background-image: linear-gradient(45deg,#00FFD5,#002BFF,#FF00C8);
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        background-size: 600%;
+        z-index: -1;
+        width: calc(100% + 4px);
+        height: calc(100% + 4px);
+        filter:blur(8px);
+        animation: glowing 20s linear infinite;
+        transition: opacity .3s ease-in-out;
+        border-radius: 10px;
+        opacity: 1;
+    }
+    &:active{
+        color:#000;
+        font-weight: $bold;
+        &::after{
+            background: transparent;
+        }
+    }
+        
+}
+
+@keyframes glowing{
+    0%{background-position: 0 0;}
+    50%{background-position: 400% 0;}
+    100%{background-position: 0 0;}
+}

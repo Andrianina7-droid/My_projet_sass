@@ -1,0 +1,52 @@
+.section_contact{
+   
+    border: 1px solid black;
+    box-shadow: 2px 5px 5px $electricblue;
+    border-radius: 20px;
+    .row{
+        display: flex;
+        .contact_item{
+            // border: 1px solid black;
+            width: 60%;
+            form{
+                flex: 1 1 30rem;
+                margin-right: 12px;
+                padding:2rem 2.5rem;
+               
+                
+                .box{
+                    padding:1rem ;
+                    font-size: 1rem;
+                    color: #333;
+                    text-transform: none;
+                    border: .1rem solid rgba(0, 0, 0, .3);
+                    border-radius: 1rem;
+                    margin: .7rem 0;
+                    width: 100%;
+                    &:focus{
+                        border-color: $electricblue;
+                    }
+                    textarea{
+                        height: 10rem;
+                        resize: none;
+                    }
+                }
+            }
+        }
+        .contact_info{
+            
+            
+            border-bottom-left-radius: inherit;
+            text-align: center;
+            width: 40%;
+            .Info{
+                @include there4functions($fs:3rem,$fw:$semi-bold,$color:$white,$isuppercase:true);
+            }
+            p{
+                @include there4functions($fs:1rem,$fw:$medium,$color:$white,$lh:1.5)
+            }
+        }
+
+    }
+    
+}

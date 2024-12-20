@@ -1,0 +1,15 @@
+h1{
+   @include there4functions($fs:2rem,$fw:$semi-bold,$lh:1,$color:$electricblue);
+    text-align: center;
+    font-weight: 400;
+}
+h4{
+    @include there4functions($fs:1.75rem,$fw:$semi-bold,$color:$black);
+}
+
+ul{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}

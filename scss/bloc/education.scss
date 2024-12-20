@@ -1,0 +1,26 @@
+.section_education{
+    
+    border: 1px solid transparent;
+    box-shadow: 2px 5px 5px #00FFFF;
+    border-radius: 30px;
+    background-image: url(../images/fond_content2.png);
+    background-size: 100% 100%;
+    padding-left: 20px;
+    &_title{
+        padding-left: 20px;
+        padding-top: 70px;
+        @include there4functions($fs:2rem,$fw:bold,$color:$electricblue)
+    }
+    .box-container{
+        padding-left: 20px;
+        margin-bottom: 80px;
+        &_date{
+            font-style: oblique;
+            font-weight: bold;
+            color: $pop;
+        }
+        &_item{
+            color:$grey;
+        }
+    }
+}
